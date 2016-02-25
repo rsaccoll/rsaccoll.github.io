@@ -1,0 +1,195 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>QA Pub</title><description>Thoughts, testing, beer and other stuff (bacon maybe? hehehe)</description><link>http://localhost:2368/</link><generator>Ghost 0.7</generator><lastBuildDate>Thu, 25 Feb 2016 03:05:11 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Automação Mobile - Dicas</title><description>&lt;p&gt;Buenas!&lt;/p&gt;
+
+&lt;p&gt;Fui desafiado no &lt;a href="http://agiletesters.com.br/topic/359/desafioagiletesters2016"&gt;#agiletesters&lt;/a&gt; para falar um pouco sobre automação mobile. &lt;br&gt;
+Sendo assim, vou abordar algumas coisas que "pentelham" um pouco na hora de fazer automação, (lembrando que nem tudo é dificuldade técnica).&lt;/p&gt;
+
+&lt;p&gt;"Well", vamos lá:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1) Propósito/Objetivo:&lt;/strong&gt; Ano passado listei isso como dica e hoje continuo fazendo&lt;/p&gt;</description><link>http://localhost:2368/automacao-mobile-como-se-organizar/</link><guid isPermaLink="false">ea1a03af-8cb4-4452-9adc-60d6028142f1</guid><dc:creator>Ramses Almeida</dc:creator><pubDate>Thu, 25 Feb 2016 02:15:47 GMT</pubDate><content:encoded>&lt;p&gt;Buenas!&lt;/p&gt;
+
+&lt;p&gt;Fui desafiado no &lt;a href="http://agiletesters.com.br/topic/359/desafioagiletesters2016"&gt;#agiletesters&lt;/a&gt; para falar um pouco sobre automação mobile. &lt;br&gt;
+Sendo assim, vou abordar algumas coisas que "pentelham" um pouco na hora de fazer automação, (lembrando que nem tudo é dificuldade técnica).&lt;/p&gt;
+
+&lt;p&gt;"Well", vamos lá:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1) Propósito/Objetivo:&lt;/strong&gt; Ano passado listei isso como dica e hoje continuo fazendo isso. Por que?? Exatamente, por que &lt;strong&gt;TODA&lt;/strong&gt; automação precisa de um propósito, já vi gente conversando em ter automação em alguns projetos,vários dispositivos, tempo de execução, blá blá blá...; mas você já parou para analisar, se no seu contexto e no local onde trabalha isso é viável? Se o projeto suporta isso? É engraçado, mas já vi projetos de automação que eram maiores que a aplicação em si. Na minha visão isso é MUITO errado,é preciso entender o que está testando, como está testando e ver a viabilidade de ter a automação. Por mais, que seja complicado testar manualmente, as vezes, o contexto em que se trabalha vai tornar a automação uma tarefa mais complicada, &lt;strong&gt;(tenha isso sempre em mente)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2) Fragmentação:&lt;/strong&gt; Isso é um problema. 
+Fato. &lt;br&gt;
+ O grande vilão: &lt;code&gt;ANDROID&lt;/code&gt;. 
+Ele é o sistema que mais tem fragmentação no mercado,e com cada empresa fazendo a sua modificação, &lt;del&gt;sim samsung, me refiro a você&lt;/del&gt; , fica gerando certos padrões de "bugs", &lt;br&gt;
+mas podemos contornar, um pouco, tendo em vista alguns pontos: &lt;br&gt;
+&lt;code&gt;1) API mínima suportada no projeto;
+ 2) Aparelhos mais vendidos; 
+ 3) Ter alguns aparelhos "in house";
+&lt;/code&gt;
+Item 3 pode ser uma incomodação, por isso, tenha sempre como um plano B rodar seus testes na nuvem. &lt;br&gt;
+Para isso, existem alguns serviços que podem ajudar:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://aws.amazon.com/pt/device-farm/"&gt;AWS Device Farm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://xamarin.com/test-cloud"&gt;Sauce Lab&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://xamarin.com/test-cloud"&gt;Xamarin Test Cloud&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://testdroid.com/"&gt;Testdroid&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.perfectomobile.com/"&gt;Perfecto Mobile&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3) App "write any language, compile native"&lt;/strong&gt;: Quando falo isso, me refiro a soluções &lt;em&gt;escreva em qualquer linguagem e compile um app nativo&lt;/em&gt;, esse tipo de aplicação tende a ter muitas "camadas" nos elementos e com isso a captação torna-se um trabalho tortuoso. Para esse tipo de app,tente sempre pegar um exemplo, (ou pedir, se não achar na internet), para ver a dificuldade que irá enfrentar.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4) "Unexpected behaviors":&lt;/strong&gt; Então..., tudo ajustado..., script configurado..., tudo no seu devido lugar, e então, do nada, vem uma mensagem de um outro app no meio da sua automação? É amiguinho, pode acontecer,por isso, verifique sempre se, ao utilizar um equipamento, ele se encontra sem outras aplicações rodando (ou se estejam rodando, pelo menos não interfiram no seu teste).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5) Ferramentas:&lt;/strong&gt; Item mais delicado de se conversar. Devido a falta de maturidade de &lt;code&gt;*TODAS&lt;/code&gt; as ferramentas de automatização, a escolha precisa ser bem cautelosa em relação a qual usar. Essa pesquisa, depende muito do que sabe de automação e como consegue "contornar" um problema. 
+Segue algumas ferramentas, para se estudar um pouco: &lt;br&gt;
+Open source:&lt;/p&gt;
+
+&lt;p&gt;1) &lt;a href="http://localhost:2368/automacao-mobile-como-se-organizar/appium.io"&gt;Appium - iOS/Android&lt;/a&gt; &lt;br&gt;
+2) &lt;a href="http://calaba.sh/"&gt;Calabash - iOS/Android&lt;/a&gt; &lt;br&gt;
+3) &lt;a href="https://github.com/kif-framework/KIF"&gt;KIF - iOS&lt;/a&gt; &lt;br&gt;
+4) &lt;a href="https://github.com/RobotiumTech/robotium"&gt;Robotium - Android&lt;/a&gt; &lt;br&gt;
+5) &lt;a href="https://github.com/google/EarlGrey"&gt;EarlGrey - iOS&lt;/a&gt; &lt;br&gt;
+6) &lt;a href="http://developer.android.com/intl/pt-br/training/testing/ui-testing/espresso-testing.html"&gt;espresso - Android&lt;/a&gt; &lt;br&gt;
+7) &lt;a href="https://ios-driver.github.io/ios-driver/"&gt;iOS driver (Muito em desuso)&lt;/a&gt; &lt;br&gt;
+8) &lt;a href="http://selendroid.io/"&gt;Selendroid (Muito usado com o Appium, para versões antigas de android&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pagas: &lt;br&gt;
+1) &lt;a href="http://www-03.ibm.com/software/products/pt/rtw"&gt;IBM RTW&lt;/a&gt; &lt;br&gt;
+2) &lt;a href="http://www.ranorex.com/"&gt;Ranorex&lt;/a&gt; &lt;br&gt;
+3) &lt;a href="http://www.froglogic.com/"&gt;Squish&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;*Nem as ferramentas pagas tem maturidade para gerar um teste automatizado de qualidade. Atualmente, Appium é a ferramenta com mais maturidade, pois tem um suporte grande por parte da comunidade&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;BÔNUS:&lt;/strong&gt;
+Talvez, você esteja em um projeto que possua uma galera "taradinha por relatórios. Algo do tipo: "relatório da máquina de café". &lt;br&gt;
+Para isso, tenho dois tipos de frameworks que uso para montar relatórios:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://extentreports.relevantcodes.com/"&gt;ExtentReports&lt;/a&gt;
+&lt;a href="http://allure.qatools.ru/"&gt;allure&lt;/a&gt;
+Caso use CI, ignore esse bônus ( hehehehe)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://i.imgur.com/7fWBVbw.png" alt="alt"&gt;&lt;/p&gt;</content:encoded></item><item><title>Mobile Testing – Dicas para refletir</title><description>&lt;p&gt;Aproveitando que tinha deixado as traças o blog, resolvi pegar a thread que fiz no &lt;b&gt;#AgileTesters&lt;/b&gt; e postar aqui. Futuramente vou atualizando o assunto e colocando outras “coisitas mas”…&lt;/p&gt;
+
+&lt;p&gt;Uma coisa que anda causando um “auê” de uns anos para cá seria como testar tecnologias móveis. Desde a entrada comercial&lt;/p&gt;</description><link>http://localhost:2368/mobile-testing-dicas-para-refletir/</link><guid isPermaLink="false">e0bc25a7-5879-4ac3-a3af-34da4efe4f50</guid><category>mobile</category><category>android</category><category>iOS</category><dc:creator>Ramses Almeida</dc:creator><pubDate>Sat, 23 Jan 2016 21:34:00 GMT</pubDate><content:encoded>&lt;p&gt;Aproveitando que tinha deixado as traças o blog, resolvi pegar a thread que fiz no &lt;b&gt;#AgileTesters&lt;/b&gt; e postar aqui. Futuramente vou atualizando o assunto e colocando outras “coisitas mas”…&lt;/p&gt;
+
+&lt;p&gt;Uma coisa que anda causando um “auê” de uns anos para cá seria como testar tecnologias móveis. Desde a entrada comercial do iphone uma avalanche de oportunidades, apps, idéias, etc etc surgiram.. E nisso entra “Como testar apps em dispositivos móveis?”.&lt;/p&gt;
+
+&lt;p&gt;Vendo isso (E já sofrido com essa dúvida), irei deixar algumas dicas de como fiz (e ando fazendo) para garantir a qualidade em apps moveis.&lt;/p&gt;
+
+&lt;p&gt;Segue pontos em que tomo cuidado em sempre ver. Muita coisa pode se misturar com o dia a dia em termos de teste, mas é assim mesmo. Minha experência é metade em times ágeis e o restante em modo waterfall.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;1) Propósito/Objetivo:&lt;/b&gt; Parece engraçado começar com algo tão “banal” mas essa visibilidade é importante. Conforme o produto vai sendo elaborado e depois dando “cria” as coisas podem ficar meio fora do controle. Tenha em mente do que o app pode fazer e o que ele não pode fazer. Quando se está trabalhando em equipe, e por ventura, receba muito ruído externo, é importante estar bem alinhando com o objetivo do app. Mudanças ocorrem e elas devem ser feitas/aceitas pela equipe ou não. &lt;br&gt;
+Se o app foi recebido já pronto para homologação, sem que tenha participado do processo de desenvolvimento, ainda assim se preocupe com esse item.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;2) Ambiente e dispositivos:&lt;/b&gt; Eu sei, eu sei…item delicado, mas é importante ver isso no inicio. Se vai adquirir aparelhos, se pode utilizar serviços na nuvem, se vai tentar a sorte e não testar nada (brinks, hehehe). E um mundo ideal se teriam todos os aparelhos de todas as marcas e tudo seria maravilha. Imagina o tempo para fazer tudo isso? Irreal!. Planeje junto com a equipe, como abordar para o app. Valide o marketshare do seu pais, analise as vendas de black friday, converse com outros profissionais…Junte dados para ter uma decisão consistente e um ambiente que a equipe possa criar e gerar sua manutenção. &lt;br&gt;
+Caso esteja no modo waterfall e já possua uma infra e aparelhos para os testes, verifique se o que tem contempla para a qualidade do app. Caso precise adquirir, ou “pedir emprestado” verifique a disponibilidade. Deixe claro da capacidade do seu setor e veja se não consegue uma “parceria” para aquisição/emprestimo de aparelhos e/ou ambiente. Isso pode ser extremamente útil.&lt;/p&gt;
+
+&lt;p&gt;Sobre os aparelhos: Isso pode ser muito custoso para um projeto. Por isso, se o nível de segurança da sua empresa permite virtualização, aposte nisso. Existe bons serviços:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://xamarin.com/test-cloud"&gt;http://xamarin.com/test-cloud&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.perfectomobile.com/"&gt;http://www.perfectomobile.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://saucelabs.com/mobile/"&gt;https://saucelabs.com/mobile/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;3) Automaçao:&lt;/b&gt; Yeap. Você leu perfeitamente. No projeto veja tudo que pode (e que entrega valor) para automatizar e faça. Isso ajuda nos próximos sprints e mantem bastante a qualidade do que está sendo feito. Entregas com mais qualidade resultam em menos problemas nas “stores da vida”.&lt;/p&gt;
+
+&lt;p&gt;Caso não possua tempo, pergunte se no momento do desenvolvimento houve alguma automação. Peça alguma evidência dos testes. Caso não tenha nenhuma, alinhe com o responsável sobre ter isso no projeto e como pode ser útil para futura manutenções e “garantias de qualidade”&lt;/p&gt;
+
+&lt;p&gt;Sobre automação: Existem algumas opções pagas e open source. Atualmente estou vendo uma solução paga. Se chama Rational TestWorkbench (mobile edition). &lt;br&gt;
+Opinião pessoal: Gosto muito das ferramentas open source pela facilidade de modificar algo no “core” se necessário. As que já usei e tem um bom ganho eu automação&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- Calabash iOS/Android: http://calaba.sh/
+- Appium: http://appium.io/
+- Selendroid: http://selendroid.io/
+- iOS driver : http://ios-driver.github.io/ios-driver/
+
+Alguns pagos que "ajudaram"
+- Squish: http://www.froglogic.com/squish/gui-testing/
+- RTW: http://www-03.ibm.com/software/products/pt/rtw
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;b&gt;4) Integração:&lt;/b&gt; Nunca, mas nunca esqueça desse cara. Sério, nunca esqueça do ambiente integrado. Isso pode ser o sucesso ou o fracasso do app.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;5)Interface:&lt;/b&gt; Importante ter alguém na equipe que enteda de UX ou arquitetura da informação. Estamos em um momento que “menos é mais”. Quanto menos o usuário tiver que movimentar para achar algo, melhor para ele (e mais trabalho para a equipe).&lt;/p&gt;
+
+&lt;p&gt;Eu gosto muito de visitar esse site para refletir e ter idéias..&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://www.pttrns.com/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Ajuda a ter idéias sobre padrões…. =)&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;6) Explore:&lt;/b&gt; estória entregue? Hora de “navegar” sobre ela. Não tenha medo e usar e abusar. Só lembre do primeiro item. &lt;br&gt;
+Se está em um modo mais tradicional, não gaste muito tempo criando os casos sem colocar a mão no app ou um protótipo. Mas só por documentação pode ser perda de tempo. Na minha opinião, é preciso ver e utilizar o app para ter uma noção de como validar a qualidade do mesmo.&lt;/p&gt;
+
+&lt;p&gt;Bom isso foram dicas para ter um “guia” na parte de mobile testing. Espero futuramente pegar esses itens e detalhar melhor..&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://i.imgur.com/i3wCPmq.png" alt="Agile Testers logo"&gt;&lt;/p&gt;
+
+&lt;p&gt;Ps:Post retirado do meu blog feito em wordpress (e que vai dizer "bye bye" logo, hehehe.&lt;/p&gt;</content:encoded></item><item><title>Welcome to Ghost</title><description>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list&lt;/p&gt;</description><link>http://localhost:2368/welcome-to-ghost/</link><guid isPermaLink="false">cc125807-facd-454f-a426-e140f5588c12</guid><category>Getting Started</category><dc:creator>Ramses Almeida</dc:creator><pubDate>Sat, 23 Jan 2016 20:43:45 GMT</pubDate><content:encoded>&lt;p&gt;You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you started. You can manage your content by signing in to the admin area at &lt;code&gt;&amp;lt;your blog URL&amp;gt;/ghost/&lt;/code&gt;. When you arrive, you can select this post from a list on the left and see a preview of it on the right. Click the little pencil icon at the top of the preview to edit this post and read the next section!&lt;/p&gt;
+
+&lt;h2 id="gettingstarted"&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;Ghost uses something called Markdown for writing. Essentially, it's a shorthand way to manage your post formatting as you write!&lt;/p&gt;
+
+&lt;p&gt;Writing in Markdown is really easy. In the left hand panel of Ghost, you simply write as you normally would. Where appropriate, you can use &lt;em&gt;shortcuts&lt;/em&gt; to &lt;strong&gt;style&lt;/strong&gt; your content. For example, a list:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Item number one&lt;/li&gt;
+&lt;li&gt;Item number two
+&lt;ul&gt;&lt;li&gt;A nested item&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;A final item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;or with numbers!&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Remember to buy some milk  &lt;/li&gt;
+&lt;li&gt;Drink the milk  &lt;/li&gt;
+&lt;li&gt;Tweet that I remembered to buy the milk, and drank it&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id="links"&gt;Links&lt;/h3&gt;
+
+&lt;p&gt;Want to link to a source? No problem. If you paste in a URL, like &lt;a href="http://ghost.org"&gt;http://ghost.org&lt;/a&gt; - it'll automatically be linked up. But if you want to customise your anchor text, you can do that too! Here's a link to &lt;a href="http://ghost.org"&gt;the Ghost website&lt;/a&gt;. Neat.&lt;/p&gt;
+
+&lt;h3 id="whataboutimages"&gt;What about Images?&lt;/h3&gt;
+
+&lt;p&gt;Images work too! Already know the URL of the image you want to include in your article? Simply paste it in like this to make it show up:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://ghost.org/images/ghost.png" alt="The Ghost Logo"&gt;&lt;/p&gt;
+
+&lt;p&gt;Not sure which image you want to use yet? That's ok too. Leave yourself a descriptive placeholder and keep writing. Come back later and drag and drop the image in to upload:&lt;/p&gt;
+
+&lt;h3 id="quoting"&gt;Quoting&lt;/h3&gt;
+
+&lt;p&gt;Sometimes a link isn't enough, you want to quote someone on what they've said. Perhaps you've started using a new blogging platform and feel the sudden urge to share their slogan? A quote might be just the way to do it!&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Ghost - Just a blogging platform&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id="workingwithcode"&gt;Working with Code&lt;/h3&gt;
+
+&lt;p&gt;Got a streak of geek? We've got you covered there, too. You can write inline &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; blocks really easily with back ticks. Want to show off something more comprehensive? 4 spaces of indentation gets you there.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.awesome-thing {
+    display: block;
+    width: 100%;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id="readyforabreak"&gt;Ready for a Break?&lt;/h3&gt;
+
+&lt;p&gt;Throw 3 or more dashes down on any new line and you've got yourself a fancy new divider. Aw yeah.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3 id="advancedusage"&gt;Advanced Usage&lt;/h3&gt;
+
+&lt;p&gt;There's one fantastic secret about Markdown. If you want, you can write plain old HTML and it'll still work! Very flexible.&lt;/p&gt;
+
+&lt;p&gt;&lt;input type="text" placeholder="I'm an input field!"&gt;&lt;/p&gt;
+
+&lt;p&gt;That should be enough to get you started. Have fun - and let us know what you think :)&lt;/p&gt;</content:encoded></item></channel></rss>

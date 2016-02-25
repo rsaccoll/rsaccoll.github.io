@@ -1,0 +1,225 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Mobile Testing – Dicas para refletir</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=7df6b089b9">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="QA Pub">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Mobile Testing – Dicas para refletir">
+    <meta property="og:description" content="Aproveitando que tinha deixado as traças o blog, resolvi pegar a thread que fiz no #AgileTesters e postar aqui. Futuramente vou atualizando o assunto e colocando outras “coisitas mas”… Uma coisa que anda causando um “auê” de uns anos para...">
+    <meta property="og:url" content="http://localhost:2368/mobile-testing-dicas-para-refletir/">
+    <meta property="article:published_time" content="2016-01-23T21:34:00.557Z">
+    <meta property="article:modified_time" content="2016-01-23T21:37:06.706Z">
+    <meta property="article:tag" content="mobile">
+    <meta property="article:tag" content="android">
+    <meta property="article:tag" content="iOS">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Mobile Testing – Dicas para refletir">
+    <meta name="twitter:description" content="Aproveitando que tinha deixado as traças o blog, resolvi pegar a thread que fiz no #AgileTesters e postar aqui. Futuramente vou atualizando o assunto e colocando outras “coisitas mas”… Uma coisa que anda causando um “auê” de uns anos para...">
+    <meta name="twitter:url" content="http://localhost:2368/mobile-testing-dicas-para-refletir/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "QA Pub",
+    "author": {
+        "@type": "Person",
+        "name": "Ramses Almeida",
+        "image": "//www.gravatar.com/avatar/6312451739a1a8f2f0ccf88ce33c078d?s=250&d=mm&r=x",
+        "url": "http://localhost:2368/author/ramses",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Mobile Testing – Dicas para refletir",
+    "url": "http://localhost:2368/mobile-testing-dicas-para-refletir/",
+    "datePublished": "2016-01-23T21:34:00.557Z",
+    "dateModified": "2016-01-23T21:37:06.706Z",
+    "keywords": "mobile, android, iOS",
+    "description": "Aproveitando que tinha deixado as traças o blog, resolvi pegar a thread que fiz no #AgileTesters e postar aqui. Futuramente vou atualizando o assunto e colocando outras “coisitas mas”… Uma coisa que anda causando um “auê” de uns anos para..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="QA Pub" href="../rss/index.html">
+</head>
+<body class="post-template tag-mobile tag-android tag-ios nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-home" role="presentation"><a href="../">Home</a></li>
+    </ul>
+    <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-mobile tag-android tag-ios">
+
+        <header class="post-header">
+            <h1 class="post-title">Mobile Testing – Dicas para refletir</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-01-23">23 January 2016</time>  on <a href="../tag/mobile/">mobile</a>, <a href="../tag/android/">android</a>, <a href="../tag/ios/">iOS</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>Aproveitando que tinha deixado as traças o blog, resolvi pegar a thread que fiz no <b>#AgileTesters</b> e postar aqui. Futuramente vou atualizando o assunto e colocando outras “coisitas mas”…</p>
+
+<p>Uma coisa que anda causando um “auê” de uns anos para cá seria como testar tecnologias móveis. Desde a entrada comercial do iphone uma avalanche de oportunidades, apps, idéias, etc etc surgiram.. E nisso entra “Como testar apps em dispositivos móveis?”.</p>
+
+<p>Vendo isso (E já sofrido com essa dúvida), irei deixar algumas dicas de como fiz (e ando fazendo) para garantir a qualidade em apps moveis.</p>
+
+<p>Segue pontos em que tomo cuidado em sempre ver. Muita coisa pode se misturar com o dia a dia em termos de teste, mas é assim mesmo. Minha experência é metade em times ágeis e o restante em modo waterfall.</p>
+
+<p><b>1) Propósito/Objetivo:</b> Parece engraçado começar com algo tão “banal” mas essa visibilidade é importante. Conforme o produto vai sendo elaborado e depois dando “cria” as coisas podem ficar meio fora do controle. Tenha em mente do que o app pode fazer e o que ele não pode fazer. Quando se está trabalhando em equipe, e por ventura, receba muito ruído externo, é importante estar bem alinhando com o objetivo do app. Mudanças ocorrem e elas devem ser feitas/aceitas pela equipe ou não. <br>
+Se o app foi recebido já pronto para homologação, sem que tenha participado do processo de desenvolvimento, ainda assim se preocupe com esse item.</p>
+
+<p><b>2) Ambiente e dispositivos:</b> Eu sei, eu sei…item delicado, mas é importante ver isso no inicio. Se vai adquirir aparelhos, se pode utilizar serviços na nuvem, se vai tentar a sorte e não testar nada (brinks, hehehe). E um mundo ideal se teriam todos os aparelhos de todas as marcas e tudo seria maravilha. Imagina o tempo para fazer tudo isso? Irreal!. Planeje junto com a equipe, como abordar para o app. Valide o marketshare do seu pais, analise as vendas de black friday, converse com outros profissionais…Junte dados para ter uma decisão consistente e um ambiente que a equipe possa criar e gerar sua manutenção. <br>
+Caso esteja no modo waterfall e já possua uma infra e aparelhos para os testes, verifique se o que tem contempla para a qualidade do app. Caso precise adquirir, ou “pedir emprestado” verifique a disponibilidade. Deixe claro da capacidade do seu setor e veja se não consegue uma “parceria” para aquisição/emprestimo de aparelhos e/ou ambiente. Isso pode ser extremamente útil.</p>
+
+<p>Sobre os aparelhos: Isso pode ser muito custoso para um projeto. Por isso, se o nível de segurança da sua empresa permite virtualização, aposte nisso. Existe bons serviços:</p>
+
+<p><a href="http://xamarin.com/test-cloud">http://xamarin.com/test-cloud</a></p>
+
+<p><a href="http://www.perfectomobile.com/">http://www.perfectomobile.com/</a></p>
+
+<p><a href="https://saucelabs.com/mobile/">https://saucelabs.com/mobile/</a></p>
+
+<p><b>3) Automaçao:</b> Yeap. Você leu perfeitamente. No projeto veja tudo que pode (e que entrega valor) para automatizar e faça. Isso ajuda nos próximos sprints e mantem bastante a qualidade do que está sendo feito. Entregas com mais qualidade resultam em menos problemas nas “stores da vida”.</p>
+
+<p>Caso não possua tempo, pergunte se no momento do desenvolvimento houve alguma automação. Peça alguma evidência dos testes. Caso não tenha nenhuma, alinhe com o responsável sobre ter isso no projeto e como pode ser útil para futura manutenções e “garantias de qualidade”</p>
+
+<p>Sobre automação: Existem algumas opções pagas e open source. Atualmente estou vendo uma solução paga. Se chama Rational TestWorkbench (mobile edition). <br>
+Opinião pessoal: Gosto muito das ferramentas open source pela facilidade de modificar algo no “core” se necessário. As que já usei e tem um bom ganho eu automação</p>
+
+<pre><code>- Calabash iOS/Android: http://calaba.sh/
+- Appium: http://appium.io/
+- Selendroid: http://selendroid.io/
+- iOS driver : http://ios-driver.github.io/ios-driver/
+
+Alguns pagos que "ajudaram"
+- Squish: http://www.froglogic.com/squish/gui-testing/
+- RTW: http://www-03.ibm.com/software/products/pt/rtw
+</code></pre>
+
+<p><b>4) Integração:</b> Nunca, mas nunca esqueça desse cara. Sério, nunca esqueça do ambiente integrado. Isso pode ser o sucesso ou o fracasso do app.</p>
+
+<p><b>5)Interface:</b> Importante ter alguém na equipe que enteda de UX ou arquitetura da informação. Estamos em um momento que “menos é mais”. Quanto menos o usuário tiver que movimentar para achar algo, melhor para ele (e mais trabalho para a equipe).</p>
+
+<p>Eu gosto muito de visitar esse site para refletir e ter idéias..</p>
+
+<pre><code>http://www.pttrns.com/
+</code></pre>
+
+<p>Ajuda a ter idéias sobre padrões…. =)</p>
+
+<p><b>6) Explore:</b> estória entregue? Hora de “navegar” sobre ela. Não tenha medo e usar e abusar. Só lembre do primeiro item. <br>
+Se está em um modo mais tradicional, não gaste muito tempo criando os casos sem colocar a mão no app ou um protótipo. Mas só por documentação pode ser perda de tempo. Na minha opinião, é preciso ver e utilizar o app para ter uma noção de como validar a qualidade do mesmo.</p>
+
+<p>Bom isso foram dicas para ter um “guia” na parte de mobile testing. Espero futuramente pegar esses itens e detalhar melhor..</p>
+
+<p><img src="https://i.imgur.com/i3wCPmq.png" alt="Agile Testers logo"></p>
+
+<p>Ps:Post retirado do meu blog feito em wordpress (e que vai dizer "bye bye" logo, hehehe.</p>
+        </section>
+
+        <footer class="post-footer">
+
+
+            <figure class="author-image">
+                <a class="img" href="../author/ramses/" style="background-image: url(http://www.gravatar.com/avatar/6312451739a1a8f2f0ccf88ce33c078d?s=250&amp;d=mm&amp;r=x)"><span class="hidden">Ramses Almeida's Picture</span></a>
+            </figure>
+
+            <section class="author">
+                <h4><a href="../author/ramses/">Ramses Almeida</a></h4>
+
+                    <p>Read <a href="../author/ramses/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Mobile%20Testing%20%E2%80%93%20Dicas%20para%20refletir&amp;url=http://localhost:2368/mobile-testing-dicas-para-refletir/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/mobile-testing-dicas-para-refletir/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/mobile-testing-dicas-para-refletir/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story no-cover" href="../automacao-mobile-como-se-organizar/">
+        <section class="post">
+            <h2>Automação Mobile - Dicas</h2>
+            <p>Buenas! Fui desafiado no #agiletesters para falar um pouco sobre automação mobile.  Sendo assim, vou abordar algumas coisas que…</p>
+        </section>
+    </a>
+    <a class="read-next-story prev no-cover" href="../welcome-to-ghost/">
+        <section class="post">
+            <h2>Welcome to Ghost</h2>
+            <p>You're live! Nice. We've put together a little post to introduce you to the Ghost editor and get you…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">QA Pub</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=7df6b089b9"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=7df6b089b9"></script>
+
+</body>
